@@ -1,6 +1,6 @@
 # Sameer
 
-<!-- ![👋 Hi, I'm Sameer Kumar](https://miro.medium.com/v2/resize:fit:1358/0*FGD6BUzzZs1VJLuY.gif) -->
+![👋 Hi, I'm Sameer Kumar](https://miro.medium.com/v2/resize:fit:1358/0*FGD6BUzzZs1VJLuY.gif)
 <!-- ![Profile views](https://komarev.com/ghpvc/?username=ravuthz&label=Profile%20views&color=0e75b6&style=flat) -->
 
 <div align="center">
