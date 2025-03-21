@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript HTML DOM</h1>
+    <textarea id="demo">This is a demonstration of HTML DOM.</textarea>
+    <button onclick="changeText()">Click me to change text</button>
+    <button onclick="makeBold()">Bold</button>
+    <button onclick="makeItalic()">Italic</button>
+    <button onclick="makeUnderline()">Underline</button>
+    <button onclick="makeUppercase()">Uppercase</button>
+    <button onclick="makeClear()">Clear</button>
+    <button onclick="deleteParagraph()">Delete Paragraph</button>
+    <button onclick="touchMe()">Touch me</button>
+    <button onclick="zoomIn()">Zoom In</button>
+    <button onclick="zoomOut()">Zoom Out</button>
+    <button onclick="increase()">Increase</button>
+    <button onclick="decrease()">Decrease</button>
+    <button onclick="Rectangle()">Rectangle</button>
+    <button onclick="Circle()">Circle</button>
+    <button onclick="Triangle()">Triangle</button>
+    <button onclick="Square()">Square</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML = "Text changed!";
+        }
+
+        function makeBold() {
+            document.getElementById("demo").style.fontWeight = "bold";
+        }
+
+        function makeItalic() {
+            document.getElementById("demo").style.fontStyle = "italic";
+        }
+
+        function makeUnderline() {
+            document.getElementById("demo").style.textDecoration = "underline";
+        }
+
+        function makeUppercase() {
+            document.getElementById("demo").style.textTransform = "uppercase";
+        }
+
+        function makeClear() {
+            document.getElementById("demo").innerHTML = "";
+        }
+
+        function deleteParagraph() {
+            document.getElementById("demo").remove();
+        }
+
+        function touchMe() {
+            alert("You touched me!");
+        }
+
+        function zoomIn() {
+            document.getElementById("demo").style.fontSize = "larger";
+        }
+
+        function zoomOut() {
+            document.getElementById("demo").style.fontSize = "smaller";
+        }
+
+        function increase() {
+            let currentSize = window.getComputedStyle(document.getElementById("demo")).fontSize;
+            document.getElementById("demo").style.fontSize = (parseFloat(currentSize) + 2) + "px";
+        }
+
+        function decrease() {
+            let currentSize = window.getComputedStyle(document.getElementById("demo")).fontSize;
+            document.getElementById("demo").style.fontSize = (parseFloat(currentSize) -2) + "px";
+        }
+
+        function Rectangle() {
+            document.getElementById("demo").style.width = "200px";
+            document.getElementById("demo").style.height = "100px";
+            document.getElementById("demo").style.backgroundColor = "lightblue";
+        }
+
+        function Circle() {
+            document.getElementById("demo").style.width = "100px";
+            document.getElementById("demo").style.height = "100px";
+            document.getElementById("demo").style.borderRadius = "50%";
+            document.getElementById("demo").style.backgroundColor = "lightgreen";
+        }
+
+        function Triangle() {
+            document.getElementById("demo").style.width = "0";
+            document.getElementById("demo").style.height = "0";
+            document.getElementById("demo").style.borderLeft = "50px solid transparent";
+            document.getElementById("demo").style.borderRight = "50px solid transparent";
+            document.getElementById("demo").style.borderBottom = "100px solid lightcoral";
+        }
+
+        function Square() {
+            document.getElementById("demo").style.width = "100px";
+            document.getElementById("demo").style.height = "100px";
+            document.getElementById("demo").style.backgroundColor = "lightyellow";
+        }
+    </script>
+</body>
+</html>

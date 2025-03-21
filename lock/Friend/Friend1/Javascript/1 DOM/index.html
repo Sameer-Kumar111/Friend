@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- DOM Ke First Class -->
+    <h1>JavaScript DOM Manipulation</h1>
+    <textarea id="demo" rows="4" cols="50">This is a demonstration of DOM manipulation.</textarea>
+    <button onclick="changeText()">Click me to change text</button>
+    <button onclick="makeBold()">Bold</button>
+    <button onclick="makeItalic()">Italic</button>
+    <button onclick="makeUnderline()">Underline</button>
+    <button onclick="makeUppercase()">Uppercase</button>
+    <button onclick="makeClear()">Clear</button>
+    <button onclick="deleteParagraph()">Delete Paragraph</button>
+    <button onclick="touchMe()">Touch me</button>
+    <button onclick="zoomIn()">Zoom In</button>
+    <button onclick="zoomOut()">Zoom Out</button>
+    <button onclick="drawRectangle()">Draw Rectangle</button>
+
+    <script>
+    function drawRectangle() {
+        const rect = document.createElement("div");
+        rect.style.width = "100px";
+        rect.style.height = "50px";
+        rect.style.backgroundColor = "blue";
+        rect.style.marginTop = "10px";
+        document.body.appendChild(rect);
+    }
+    </script>
+
+    <script>
+    function changeText() {
+        document.getElementById("demo").value = "Text has been changed!";
+    }
+
+    function makeBold() {
+        document.getElementById("demo").style.fontWeight = "bold";
+    }
+
+    function makeClear() {
+        document.getElementById("demo").style.fontWeight = "normal";
+        document.getElementById("demo").style.fontStyle = "normal";
+        document.getElementById("demo").style.textDecoration = "none";
+        document.getElementById("demo").style.textTransform = "none";
+        document.getElementById("demo").style.fontSize = "initial";
+        document.getElementById("demo").value = "This is a demonstration of DOM manipulation.";
+    }
+
+    function makeItalic() {
+        document.getElementById("demo").style.fontStyle = "italic";
+    }
+
+    function makeUnderline() {
+        document.getElementById("demo").style.textDecoration = "underline";
+    }
+
+    function makeUppercase() {
+        document.getElementById("demo").style.textTransform = "uppercase";
+    }
+
+    function deleteParagraph() {
+        document.getElementById("demo").value = "";
+    }
+
+    function touchMe() {
+        alert("Button touched!");
+    }
+
+    function zoomIn() {
+        let currentSize = window.getComputedStyle(document.getElementById("demo")).fontSize;
+        document.getElementById("demo").style.fontSize = (parseFloat(currentSize) + 2) + "px";
+    }
+
+    function zoomOut() {
+        let currentSize = window.getComputedStyle(document.getElementById("demo")).fontSize;
+        document.getElementById("demo").style.fontSize = (parseFloat(currentSize) - 2) + "px";
+    }
+    </script>
+</body>
+</html>

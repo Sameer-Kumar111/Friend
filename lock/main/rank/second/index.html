@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>   
+<body>
+    <h1>Calculator</h1>
+    <script>
+        // calculator
+        calculator();
+        function calculator(){
+            let num1 = parseFloat(prompt("Enter first number"));
+            let num2 = parseFloat(prompt("Enter second number"));
+            let operator = prompt("Enter operator (+, -, *, /)");
+            let result;
+             
+            let operators = {
+                '+': function(a, b) { return a + b },
+                '-': function(a, b) { return a - b },
+                '*': function(a, b) { return a * b },
+                '/': function(a, b) { return a / b }
+            };
+            if(operators[operator]){
+                result = operators[operator](num1, num2);
+                console.log("The result is: " + result);
+                document.write("The result is: " + result + "<br>");
+            }else{
+                console.log("Invalid operator");
+                document.write("Invalid operator<br>");
+                
+            }
+            let again = prompt("Do you want to calculate again? (yes/no)");
+            if(again.toLowerCase() === 'yes'){
+                calculator();
+            }
+           
+            
+            
+            
+           
+
+
+            
+        }
+        
+
+        
+
+    </script>
+</body>
+</html>

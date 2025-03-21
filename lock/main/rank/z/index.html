@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- JS HTML DOM -->
+    <h1>JavaScript HTML DOM</h1>
+    <p id="demo">This is a demonstration of HTML DOM.</p>
+    <button onclick="changeText()">Click me to change text</button>
+    <button onclick="makeBold()">Bold</button>
+    <button onclick="makeItalic()">Italic</button>
+    <button onclick="makeUnderline()">Underline</button>
+    <button onclick="makeUppercase()">Uppercase</button>
+    <button onclick="makeClear()">Clear</button>
+    <button onclick="deleteParagraph()">Delete Paragraph</button>
+    <button onclick="touchMe()">Touch me</button>
+    <button onclick="zoomIn()">Zoom In</button>
+    <button onclick="zoomOut()">Zoom Out</button>
+    <button onclick="increase()">increase</button>
+    <button onclick="decrease()">decrease</button>
+    <button onclick="Rectangle()">Rectangle</button>
+    <button onclick="Circle()">Circle</button>
+    <button onclick="Triangle()">Triangle</button>
+    <button onclick="Square()">Square</button>
+    <button onclick="Line()">Line</button>
+    <button onclick="Ellipse()">Ellipse</button>
+    <button onclick="Polygon()">Polygon</button>
+    <button onclick="Polyline()">Polyline</button>
+    <button onclick="Path()">Path</button>
+    <button onclick="Text()">Text</button>
+    <button onclick="Image()">Image</button>
+    <button onclick="Video()">Video</button>
+    <button onclick="Audio()">Audio</button>
+    <button onclick="Iframe()">Iframe</button>
+    <button onclick="Canvas()">Canvas</button>
+    <button onclick="SVG()">SVG</button>
+    <button onclick="Table()">Table</button>
+    <button onclick="Form()">Form</button>
+    <button onclick="Input()">Input</button>
+    <button onclick="Button()">Button</button>
+    <button onclick="Select()">Select</button>
+    <button onclick="Option()">Option</button>
+    <button onclick="Textarea()">Textarea</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML = "Text changed!";
+        }
+
+        function makeBold() {
+            document.getElementById("demo").style.fontWeight = "bold";
+        }
+
+        function makeItalic() {
+            document.getElementById("demo").style.fontStyle = "italic";
+        }
+
+        function makeUnderline() {
+            document.getElementById("demo").style.textDecoration = "underline";
+        }
+
+        function makeUppercase() {
+            document.getElementById("demo").style.textTransform = "uppercase";
+        }
+
+        function makeClear() {
+            document.getElementById("demo").innerHTML = "";
+        }
+
+        function deleteParagraph() {
+            document.getElementById("demo").remove();
+        }
+
+        function touchMe() {
+            alert("You touched me!");
+        }
+
+        function zoomIn() {
+            document.getElementById("demo").style.fontSize = "larger";
+        }
+
+        function zoomOut() {
+            document.getElementById("demo").style.fontSize = "smaller";
+        }
+
+        function increase() {
+            document.getElementById("demo").style.fontSize = "2em";
+        }
+
+        function decrease() {
+            document.getElementById("demo").style.fontSize = "0.5em";
+        }
+
+        function Rectangle() {
+            document.getElementById("demo").style.width = "200px";
+            document.getElementById("demo").style.height = "100px";
+            document.getElementById("demo").style.backgroundColor = "blue";
+        }
+
+        function Circle() {
+            document.getElementById("demo").style.width = "100px";
+            document.getElementById("demo").style.height = "100px";
+            document.getElementById("demo").style.backgroundColor = "red";
+            document.getElementById("demo").style.borderRadius = "50%";
+        }
+
+        function Triangle() {
+            document.getElementById("demo").style.width = "0";
+            document.getElementById("demo").style.height = "0";
+            document.getElementById("demo").style.borderLeft = "50px solid transparent";
+            document.getElementById("demo").style.borderRight = "50px solid transparent";
+            document.getElementById("demo").style.borderBottom = "100px solid green";
+        }
+
+        function Square() {
+            document.getElementById("demo").style.width = "100px";
+            document.getElementById("demo").style.height = "100px";
+            document.getElementById("demo").style.backgroundColor = "yellow";
+        }
+
+        function Line() {
+            document.getElementById("demo").style.width = "100px";
+            document.getElementById("demo").style.height = "2px";
+            document.getElementById("demo").style.backgroundColor = "black";
+        }
+
+        function Ellipse() {
+            document.getElementById("demo").style.width = "200px";
+            document.getElementById("demo").style.height = "100px";
+            document.getElementById("demo").style.backgroundColor = "purple";
+            document.getElementById("demo").style.borderRadius = "50%";
+        }
+
+        function Polygon() {
+            document.getElementById("demo").style.width = "0";
+            document.getElementById("demo").style.height = "0";
+            document.getElementById("demo").style.borderLeft = "50px solid transparent";
+            document.getElementById("demo").style.borderRight = "50px solid transparent";
+            document.getElementById("demo").style.borderBottom = "100px solid orange";
+        }
+
+        function Polyline() {
+            document.getElementById("demo").style.width = "100px";
+            document.getElementById("demo").style.height = "2px";
+            document.getElementById("demo").style.backgroundColor = "brown";
+        }
+
+        function Path() {
+            document.getElementById("demo").style.width = "100px";
+            document.getElementById("demo").style.height = "2px";
+            document.getElementById("demo").style.backgroundColor = "gray";
+        }
+
+        function Text() {
+            document.getElementById("demo").innerHTML = "This is a text element.";
+        }
+
+        function Image() {
+            document.getElementById("demo").innerHTML = '<img src="https://via.placeholder.com/150" alt="Placeholder Image">';
+        }
+
+        function Video() {
+            document.getElementById("demo").innerHTML = '<video width="320" height="240" controls><source src="movie.mp4" type="video/mp4">Your browser does not support the video tag.</video>';
+        }
+
+        function Audio() {
+            document.getElementById("demo").innerHTML = '<audio controls><source src="audio.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+        }
+
+        function Iframe() {
+            document.getElementById("demo").innerHTML = '<iframe src="https://www.example.com" width="300" height="200"></iframe>';
+        }
+
+        function Canvas() {
+            document.getElementById("demo").innerHTML = '<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>';
+        }
+
+        function SVG() {
+            document.getElementById("demo").innerHTML = '<svg width="100" height="100"><circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /></svg>';
+        }
+
+        function Table() {
+            document.getElementById("demo").innerHTML = '<table border="1"><tr><th>Firstname</th><th>Lastname</th></tr><tr><td>John</td><td>Doe</td></tr></table>';
+        }
+
+        function Form() {
+            document.getElementById("demo").innerHTML = '<form><label for="fname">First name:</label><input type="text" id="fname" name="fname"><br><label for="lname">Last name:</label><input type="text" id="lname" name="lname"><br><input type="submit" value="Submit"></form>';
+        }
+
+        function Input() {
+            document.getElementById("demo").innerHTML = '<input type="text" id="myInput" value="Hello World">';
+        }
+
+        function Button() {
+            document.getElementById("demo").innerHTML = '<button>Click me</button>';
+        }
+
+        function Select() {
+            document.getElementById("demo").innerHTML = '<select><option value="volvo">Volvo</option><option value="saab">Saab</option><option value="mercedes">Mercedes</option><option value="audi">Audi</option></select>';
+        }
+
+        function Option() {
+            document.getElementById("demo").innerHTML = '<select><option value="volvo">Volvo</option><option value="saab">Saab</option><option value="mercedes">Mercedes</option><option value="audi">Audi</option></select>';
+        }
+
+        function Textarea() {
+            document.getElementById("demo").innerHTML = '<textarea rows="4" cols="50">This is a textarea.</textarea>';
+        }
+    </script>
+
+    
+</body>
+</html>
